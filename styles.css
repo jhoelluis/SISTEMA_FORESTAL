@@ -1,0 +1,171 @@
+
+        body {
+            background-image: url('fondo.jpg');
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f4f8;
+            color: #333;
+            min-height: 100vh;
+        }
+    
+        .container {
+            width: 95%;
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    
+        h1 {
+            color: #3f05ed;
+            margin: 20px 0;
+            font-size: 2.5rem;
+            text-align: center;
+            width: 100%;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+    
+        #mapa {
+            height: 600px;
+            width: 100%;
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+    
+        #info {
+            width: 100%;
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    
+        h2 {
+            color: #2d502c;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+    
+        button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 10px 0;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+    
+        button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    
+        button:active {
+            transform: translateY(0);
+        }
+    
+        #vertexList {
+            list-style-type: none;
+            padding: 0;
+            margin: 15px 0;
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+        }
+    
+        #vertexList li {
+            background-color: #f8f9fa;
+            margin-bottom: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            color: #333;
+            transition: background-color 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideIn 0.4s forwards;
+        }
+    
+        #vertexList li:hover {
+            background-color: #e9ecef;
+        }
+    
+        #questionContainer {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #e8f4fd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    
+        #questionContainer input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+    
+        #results {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f1f8e9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    
+        #messageBox {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border: 1px solid #c8e6c9;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #1b5e20;
+            display: none;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+    
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+    
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        .tree-icon {
+            font-size: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+    
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+    
+            #map, #info {
+                width: 100%;
+            }
+        }
